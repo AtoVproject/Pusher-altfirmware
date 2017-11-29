@@ -1,4 +1,5 @@
 # Pusher-altfirmware
+
 Alternative Firmware for the Korb Modular Pusher allowing the use of mutiple FSRs at the same time.
 
 The Gate and Press out of each channel can now be used at the same time.
@@ -12,3 +13,7 @@ The CV 1-4 and CV 5-8 output the knob value of the last pressed FSR.
 When multiple FSRs are pressed at the same time, the knob values will be added together.
 
 This firmware is a modification of the origial Korb Modular firmware.
+
+Have Fun!
+
+Arthur
