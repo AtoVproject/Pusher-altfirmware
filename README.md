@@ -1,4 +1,4 @@
-# Pusher-altfirmware
+# Pusher-altfirmware By AtoVproject
 
 Alternative Firmware for the Korb Modular Pusher allowing the use of mutiple FSRs at the same time.
 
