@@ -4,7 +4,7 @@
 //  Board-Ver: 3.0
 //  Date: 10.03.2017
 
-//Korb Modular Pusher AltFirmware by AtoVproject
+//Korb Modular Pusher AltFirmware V1.0 by AtoVproject
 // Edited firmware by Arthur Gibert
 ////////////////////////////////////////////////////////////////
 
