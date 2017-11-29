@@ -16,4 +16,6 @@ This firmware is a modification of the origial Korb Modular firmware.
 
 Have Fun!
 
+
 Arthur
+For requests please contact me at AtoVproject@gmail.com
