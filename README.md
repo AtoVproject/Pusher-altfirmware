@@ -20,4 +20,5 @@ Have Fun!
 
 
 Arthur
-For requests please contact me at AtoVproject@gmail.com
+
+For requests or questions please contact me at AtoVproject@gmail.com
