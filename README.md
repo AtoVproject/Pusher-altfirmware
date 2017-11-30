@@ -19,6 +19,11 @@ This firmware is a modification of the origial Korb Modular firmware.
 Have Fun!
 
 
-Arthur
+Arthur AKA AtoV
+
+https://www.facebook.com/atovmusic/
+https://www.facebook.com/AtoVproject/
+https://atovproject.wordpress.com
+http://www.maxforlive.com/profile/user/AtoVproject
 
 For requests or questions please contact me at AtoVproject@gmail.com
