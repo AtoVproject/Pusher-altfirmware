@@ -18,6 +18,7 @@ This firmware is a modification of the origial Korb Modular firmware.
 
 Have Fun!
 
+(shared with the persmission of Korb Modular)
 
 Arthur AKA AtoV
 
