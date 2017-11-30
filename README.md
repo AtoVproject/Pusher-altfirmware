@@ -12,7 +12,7 @@ The CV 1-4 and CV 5-8 output the knob value of the last pressed FSR.
 
 When multiple FSRs are pressed at the same time, the knob values will be added together.
 
-To enter the setting section press the 4 FSRs for more than 20 seconds.
+To enter the setting section press the 4 FSRs for more than 20 seconds (Main Gate LED will flash).
 
 This firmware is a modification of the origial Korb Modular firmware.
 
