@@ -11,9 +11,6 @@
 #include <SPI.h>
 #include <math.h>
 #include <EEPROM.h>
-#include "TimerOne.h"
-
-//#include "Timer.h"
 
 
 // *************************************************************************************************
@@ -132,29 +129,7 @@ void setup() {
 // *************************************************************************************************
 
 void loop () {
-
-  /*
-    while (Show_Settings_Page== 3) {
-      if ((analogRead(A0) < Trigger_Threshold ) && (analogRead(A1) < Trigger_Threshold ) && (analogRead(A2) < Trigger_Threshold) && (analogRead(A3) < Trigger_Threshold ))  Show_Settings_Page = 0;
-
-    }
-  */
   // --------------------------------------------------Read out POT 1-8-----------------------------------------------------
-  /*
-    // POT 1-4 Upper Row
-    for (count = 4; count <= 7; count++) {
-      // select the bit
-      MUL_s0 = bitRead(count, 0);
-      MUL_s1 = bitRead(count, 1);
-      MUL_s2 = bitRead(count, 2);
-
-      digitalWrite(2,  MUL_s0);
-      digitalWrite(3,  MUL_s1);
-      digitalWrite(4,  MUL_s2);
-
-      Value[count] = map(analogRead(A4), 0, 1023, 0, 4093);
-    }
-  */
   // POT 4-8 Bottom Row
   for (int count = 0; count < 8; count++) {
     // select the bit
@@ -175,22 +150,6 @@ void loop () {
     //        Serial.println(Value[count]);
 
   }
-  /*
-    PP1 =  analogRead(A0);
-    PP2=  analogRead(A1);
-    PP3e=  analogRead(A2);
-    PP4_curve=  analogRead(A3);
-
-
-      Serial.print("PP1: ");
-      Serial.println(PP1);
-      Serial.print("PP2: ");
-      Serial.println(PP2);
-      Serial.print("PP3: ");
-      Serial.println(PP3);
-        Serial.print("PP4: ");
-      Serial.println(PP4);*/
-
   // --------------------------------------------------Read FSR 1-4---------------------------------------------------------
   // Read out the Raw-Values of FSR 1-4
   PP1_raw =  analogRead(A0);
@@ -246,13 +205,8 @@ void loop () {
   // --------------------------------------------------FSR 1 pressed--------------------------------------------------------
   if (PP1_curve >= Trigger_Threshold )  {
     FSRpressed[0] = 1;
-    //setOutput(3, 0, GAIN_1, 1, Value[0]);
-    //setOutput(3, 1, GAIN_1, 1, Value[4]);
-    //   setOutput(1, 0, GAIN_1, 1, PP1_curve* Range);
     Gate[0] = 1;
     setGates();
-    //    Serial.print("PP1: ");
-    //    Serial.println(PP1);
     if (PP1_curve > Pressure_Threshold ) setOutput(1, 0, GAIN_1, 1, (PP1_curve - Pressure_Threshold) * Range);
   }
   else  {
@@ -265,9 +219,6 @@ void loop () {
   // --------------------------------------------------FSR 2 pressed--------------------------------------------------------
   if (PP2_curve >= Trigger_Threshold )  {
     FSRpressed[1] = 1;
-    //setOutput(3, 0, GAIN_1, 1, Value[1]);
-    //setOutput(3, 1, GAIN_1, 1, Value[5]);
-    //    setOutput(1, 1, GAIN_1, 1, PP2_curve* Range);
     if (PP2_curve > Pressure_Threshold ) setOutput(1, 1, GAIN_1, 1, (PP2_curve - Pressure_Threshold) * Range);
     Gate[1] = 1;
     setGates();
@@ -276,7 +227,6 @@ void loop () {
   }
   else  {
     FSRpressed[1] = 0;
-    //setOutput(1, 1, GAIN_1, 1, 0);
     Gate[1] = 0;
     setGates();
   }
@@ -284,9 +234,6 @@ void loop () {
   // --------------------------------------------------FSR 3 pressed--------------------------------------------------------
   if (PP3_curve >= Trigger_Threshold )  {
     FSRpressed[2] = 1;
-    //setOutput(3, 0, GAIN_1, 1, Value[2]);
-    //setOutput(3, 1, GAIN_1, 1, Value[6]);
-    //   setOutput(2, 0, GAIN_1, 1, PP3_curve* Range);
     if (PP3_curve > Pressure_Threshold ) setOutput(2, 0, GAIN_1, 1, (PP3_curve - Pressure_Threshold) * Range);
     Gate[2] = 1;
     setGates();
@@ -295,7 +242,6 @@ void loop () {
   }
   else  {
     FSRpressed[2] = 0;
-    //setOutput(2, 0, GAIN_1, 1, 0);
     Gate[2] = 0;
     setGates();
 
@@ -304,9 +250,6 @@ void loop () {
   // --------------------------------------------------FSR 4 pressed--------------------------------------------------------
   if (PP4_curve >= Trigger_Threshold)  {
     FSRpressed[3] = 1;
-    //setOutput(3, 0, GAIN_1, 1, Value[3]);
-    //setOutput(3, 1, GAIN_1, 1, Value[7]);
-    //    setOutput(2, 1, GAIN_1, 1, PP4_curve* Range);
     if (PP4_curve > Pressure_Threshold ) setOutput(2, 1, GAIN_1, 1, (PP4_curve - Pressure_Threshold) * Range);
     Gate[3] = 1;
     setGates();
@@ -315,7 +258,6 @@ void loop () {
   }
   else  {
     FSRpressed[3] = 0;
-    //setOutput(2, 1, GAIN_1, 1, 0);
     Gate[3] = 0;
     setGates();
   }
