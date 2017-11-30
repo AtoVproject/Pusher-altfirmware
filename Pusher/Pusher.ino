@@ -196,8 +196,9 @@ void loop () {
     //   Serial.println("Settings");
     Counter++;
     //    Serial.println(Counter);
-    if (Counter == 20000) {
+    if (Counter == 10000) {
       Counter = 0;
+      FlashLED();
       Show_Settings_Page = 2;
       UserSettings(10000);
     }
@@ -302,6 +303,30 @@ void setOutput(int DAC, byte channel, byte gain, byte shutdown, unsigned int val
 // ---------------------------------------------------------------------------------------------------------------------
 // --------------------------------------------------setGates()---------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
+
+void FlashLED() {
+  digitalWrite(Gate_Out, HIGH);
+  delay (50);
+  digitalWrite(Gate_Out, LOW);
+  delay (50);
+  digitalWrite(Gate_Out, HIGH);
+  delay (50);
+  digitalWrite(Gate_Out, LOW);
+  delay (50);
+  digitalWrite(Gate_Out, HIGH);
+  delay (50);
+  digitalWrite(Gate_Out, LOW);
+  delay (50);
+  digitalWrite(Gate_Out, HIGH);
+  delay (50);
+  digitalWrite(Gate_Out, LOW);
+  delay (50);
+  digitalWrite(Gate_Out, HIGH);
+  delay (50);
+  digitalWrite(Gate_Out, LOW);
+  delay (50);
+}
+
 void setGates() {
   int LEDs;
   int Gates;
