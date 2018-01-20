@@ -32,4 +32,4 @@ http://www.maxforlive.com/profile/user/AtoVproject
 
 For requests or questions please contact me at AtoVproject@gmail.com
 
-Donation https://www.paypal.com/uk/cgi-bin/webscr?cmd=_flow&SESSION=6ZOsWfJitSO_jCR57c3HOdJyI63oUTme_LzkcPaCCoDcgkxV1M0hw39LrKq&dispatch=5885d80a13c0db1f8e263663d3faee8dc3f308debf7330dd8d0b0a9f21afd7d3&rapidsState=Donation__DonationFlow___StateDonationLogin&rapidsStateSignature=895bcc9a8ff510bd5e9814c29bf4cb66831e9d07
+Donation https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FU2A48L8SYWPE
